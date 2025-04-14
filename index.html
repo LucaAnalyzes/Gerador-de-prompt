@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Prompts IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Gerador de Prompts para IA</h1>
+
+    <form id="promptForm">
+      <div class="form-group">
+        <label for="tema">Tema principal do prompt:</label>
+        <input type="text" id="tema" placeholder="Ex: Criação de texto publicitário sobre café" required />
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Categoria do assunto:</label>
+        <select id="categoria" required>
+          <option value="">Selecione...</option>
+          <option>Marketing</option>
+          <option>Tecnologia</option>
+          <option>Educação</option>
+          <option>Saúde</option>
+          <option>Negócios</option>
+          <option>Ciência</option>
+          <option>Artes</option>
+          <option>Escrita Criativa</option>
+          <option>Finanças</option>
+          <option>Entretenimento</option>
+          <option>Relacionamentos</option>
+          <option>Psicologia</option>
+          <option>História</option>
+          <option>Filosofia</option>
+          <option value="outro">Outra (especifique)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="novaCategoriaContainer" style="display: none;">
+        <label for="novaCategoria">Qual é a nova categoria?</label>
+        <input type="text" id="novaCategoria" placeholder="Digite a nova categoria" />
+      </div>
+
+      <div class="form-group">
+        <label for="detalhes">Nível de detalhes:</label>
+        <select id="detalhes" required>
+          <option>Baixo</option>
+          <option>Médio</option>
+          <option>Alto</option>
+          <option>Extremo (máximo de detalhes)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="estilo">Estilo de escrita:</label>
+        <select id="estilo" required>
+          <option value="">Selecione...</option>
+          <option>Formal</option>
+          <option>Informal</option>
+          <option>Profissional</option>
+          <option>Didático</option>
+          <option>Engraçado</option>
+          <option>Dramático</option>
+          <option>Inspirador</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="formato">Formato desejado:</label>
+        <select id="formato" required>
+          <option value="">Selecione...</option>
+          <option>Texto longo</option>
+          <option>Lista</option>
+          <option>Resumo</option>
+          <option>Roteiro</option>
+          <option>Diálogo</option>
+          <option>História</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="publico">Público-alvo:</label>
+        <input type="text" id="publico" placeholder="Ex: Jovens empreendedores, mães de primeira viagem..." required
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="emocao">Emoção desejada no texto:</label>
+        <input type="text" id="emocao" placeholder="Ex: Motivação, curiosidade, empatia, surpresa..." required
+          autocomplete="off" />
+
+      </div>
+
+      <div class="form-group">
+        <label for="palavras">Palavras-chave a incluir (separadas por vírgula):</label>
+        <input type="text" id="palavras" placeholder="Ex: café, produtividade, foco" required autocomplete="off" />
+
+      </div>
+
+      <div class="form-group">
+        <label for="tom">Tom do conteúdo:</label>
+        <select id="tom" required>
+          <option value="">Selecione...</option>
+          <option>Positivo</option>
+          <option>Neutro</option>
+          <option>Crítico</option>
+          <option>Encorajador</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="idioma">Idioma do prompt:</label>
+        <select id="idioma" required>
+          <option value="Português">Português</option>
+          <option value="Inglês">Inglês</option>
+          <option value="Espanhol">Espanhol</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="gerarPrompt()">Gerar Prompt</button>
+    </form>
+
+    <div id="output" class="output-container">
+      <h3>Prompt Gerado:</h3>
+      <pre id="generatedPrompt">Aqui vai o texto gerado...</pre>
+      <button id="copyBtn">Copiar Prompt</button>
+    </div>
+  </div>
+  <!-- Anúncio Esquerdo -->
+  <div class="anuncio-lateral anuncio-esquerda">
+    <p>🔹 Anúncio aqui</p>
+  </div>
+
+  <!-- Anúncio Direito -->
+  <div class="anuncio-lateral anuncio-direita">
+    <p>🔹 Publicidade</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

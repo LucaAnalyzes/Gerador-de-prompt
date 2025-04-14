@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    /* Remover align-items e height para evitar conflitos */
+    padding: 50px 0; /* Adiciona espaço top/bottom se quiser */
+  }
+  
+  .container {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .output-container {
+    margin-top: 30px;
+    display: none;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .output-container pre {
+    white-space: pre-wrap;     /* quebra linhas automaticamente */
+    word-wrap: break-word;     /* quebra palavras longas */
+    overflow-wrap: break-word; /* compatibilidade adicional */
+    font-family: inherit;      /* usa a mesma fonte do restante do site */
+    max-width: 100%;           /* impede que ultrapasse a largura */
+  }
+  
+  /* Estilo das sugestões */
+  .suggestions-container {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 5px;
+    z-index: 999;
+
+  }
+  
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+.anuncio-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 500px;
+  background-color: #e4e4e4;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.anuncio-esquerda {
+  left: 10px;
+}
+
+.anuncio-direita {
+  right: 10px;
+}
+@media (max-width: 768px) {
+  .anuncio-lateral {
+    display: none;
+  }
+}
+
+#copyBtn {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#copyBtn:hover {
+  background-color: #218838;
+}
